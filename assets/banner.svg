@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" fill="none">
+  <defs>
+    <linearGradient id="background" x1="72" y1="34" x2="1126" y2="353" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4F8FF"/>
+      <stop offset="1" stop-color="#EEF5FF"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="136" y1="90" x2="236" y2="232" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#538AFF"/>
+      <stop offset="1" stop-color="#2361E8"/>
+    </linearGradient>
+    <filter id="shadow" x="818" y="38" width="310" height="324" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="12"/>
+      <feGaussianBlur stdDeviation="13"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 0.15 0 0 0 0 0.28 0 0 0 0 0.55 0 0 0 0.15 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="360" rx="28" fill="url(#background)"/>
+  <circle cx="1082" cy="54" r="122" fill="#DCE9FF" fill-opacity=".56"/>
+  <circle cx="1120" cy="314" r="164" fill="#E3EDFF" fill-opacity=".82"/>
+  <path d="M746 0h454v360H746z" fill="#EAF1FF" fill-opacity=".5"/>
+  <g transform="translate(92 103)">
+    <rect x="2" y="2" width="76" height="76" rx="22" fill="url(#accent)"/>
+    <path d="M39 19h16l14 14v28a5 5 0 0 1-5 5H39a5 5 0 0 1-5-5V24a5 5 0 0 1 5-5Z" fill="#fff" fill-opacity=".96"/>
+    <path d="M54 19v13h13M42 42h17M42 50h17M42 58h11" stroke="#3975ED" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="190" y="159" fill="#172642" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="54" font-weight="750" letter-spacing="-2">Файло<tspan fill="#3975ED">.</tspan></text>
+  <text x="94" y="222" fill="#31415E" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="25" font-weight="600">Локальные инструменты для PDF</text>
+  <text x="94" y="261" fill="#62718C" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17">27 операций. Ваш компьютер. Без облачной обработки.</text>
+  <g filter="url(#shadow)">
+    <rect x="906" y="66" width="148" height="201" rx="16" fill="#fff"/>
+    <path d="M1006 66h32a16 16 0 0 1 16 16v169a16 16 0 0 1-16 16h-116a16 16 0 0 1-16-16V82a16 16 0 0 1 16-16h24Z" fill="#fff"/>
+    <rect x="930" y="92" width="52" height="61" rx="10" fill="#EAF1FF"/>
+    <path d="M944 106h24M944 115h24M944 124h17M944 137h24" stroke="#3975ED" stroke-width="4" stroke-linecap="round"/>
+    <path d="M930 174h100M930 188h82M930 202h93M930 216h66" stroke="#DCE4F1" stroke-width="6" stroke-linecap="round"/>
+    <rect x="979" y="235" width="76" height="34" rx="17" fill="#3975ED"/>
+    <text x="1017" y="258" fill="#fff" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700" text-anchor="middle">PDF</text>
+  </g>
+  <g fill="#3975ED">
+    <path d="m847 102 4 11 11 4-11 4-4 11-4-11-11-4 11-4 4-11Z"/>
+    <circle cx="1071" cy="101" r="5"/>
+    <circle cx="858" cy="263" r="4"/>
+  </g>
+</svg>

@@ -1,0 +1,30 @@
+{
+  "name": "failo-local-pdf-tools",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "check": "node --check server.mjs && node --check app.js && node --check server.test.mjs",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "diff": "^8.0.2",
+    "docx": "^9.5.1",
+    "exceljs": "^4.4.0",
+    "express": "^5.1.0",
+    "jszip": "^3.10.1",
+    "multer": "^2.0.2",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^6.4.299",
+    "pptxgenjs": "^4.0.1",
+    "sharp": "^0.35.5"
+  },
+  "overrides": {
+    "image-size": "^2.0.4",
+    "uuid": "^11.1.1"
+  },
+  "allowScripts": {
+    "sharp@0.35.5": true
+  }
+}

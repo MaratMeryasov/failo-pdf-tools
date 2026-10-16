@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f8fc">
+    <meta name="description" content="Объединяйте, конвертируйте, редактируйте и распознавайте PDF на своём компьютере. 27 локальных инструментов для документов.">
+    <title>Файло — инструменты для PDF</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./node_modules/pdf-lib/dist/pdf-lib.min.js" defer></script>
+    <script src="./node_modules/jszip/dist/jszip.min.js" defer></script>
+    <script type="module" src="./bootstrap.mjs"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Файло — на главную">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        файло<span class="brand-period">.</span>
+      </a>
+      <nav class="topnav" aria-label="Основная навигация">
+        <a class="nav-link active" href="#tools">Инструменты</a>
+        <a class="nav-link" href="#how-it-works">Как это работает</a>
+      </nav>
+      <a class="privacy-pill" href="#privacy"><span class="privacy-dot"></span>Обработка на устройстве</a>
+    </header>
+
+    <main>
+      <section class="hero" id="tools">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-icon">✳</span> PDF И ИЗОБРАЖЕНИЯ</div>
+          <h1>Инструменты<br>для работы с <span class="highlight">PDF.</span></h1>
+          <p class="hero-description">Объединяйте документы, работайте со страницами, конвертируйте файлы и распознавайте текст. Всё для PDF — в одном месте.</p>
+          <div class="hero-note"><span class="lock-icon" aria-hidden="true">⌑</span> Документы обрабатываются на вашем компьютере</div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-orbit orbit-one"></div>
+          <div class="visual-orbit orbit-two"></div>
+          <div class="visual-spark spark-one">✦</div>
+          <div class="visual-spark spark-two">✳</div>
+          <div class="paper paper-back"><span></span><span></span><span></span></div>
+          <div class="paper paper-front"><div class="pdf-badge">PDF</div><span></span><span></span><span></span><span></span><div class="paper-fold"></div></div>
+          <div class="floating-chip chip-left"><span class="chip-icon">↗</span> JPG</div>
+          <div class="floating-chip chip-right"><span class="chip-icon">↔</span> PDF</div>
+          <div class="visual-shadow"></div>
+        </div>
+      </section>
+
+      <section class="tools-section" aria-labelledby="tools-title">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">ИНСТРУМЕНТЫ</div>
+            <h2 id="tools-title">Выберите задачу</h2>
+          </div>
+          <span class="tool-count">27 ИНСТРУМЕНТОВ</span>
+        </div>
+
+        <div class="tools-grid">
+          <button class="tool-card tool-merge" data-tool="merge" type="button">
+            <span class="tool-icon icon-merge"><span class="mini-page page-a"></span><span class="mini-page page-b"></span><span class="merge-plus">+</span></span>
+            <span class="tool-title">Объединить PDF</span>
+            <span class="tool-description">Соберите несколько документов в один файл</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card tool-split" data-tool="split" type="button">
+            <span class="tool-icon icon-split"><span class="split-page"></span><span class="split-cut"></span></span>
+            <span class="tool-title">Разделить PDF</span>
+            <span class="tool-description">Выберите страницы для отдельного PDF</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card tool-compress" data-tool="compress" type="button">
+            <span class="tool-icon icon-compress"><span class="compress-page"></span><span class="compress-arrow">↓</span></span>
+            <span class="tool-title">Сжать PDF</span>
+            <span class="tool-description">Уменьшите размер PDF</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card tool-to-images" data-tool="pdf-to-images" type="button">
+            <span class="tool-icon icon-image"><span class="image-page"><i></i></span><span class="image-sun"></span></span>
+            <span class="tool-title">PDF в изображения</span>
+            <span class="tool-description">Скачайте страницы в формате JPG или PNG</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card tool-to-pdf" data-tool="images-to-pdf" type="button">
+            <span class="tool-icon icon-to-pdf"><span class="image-stack"></span><span class="to-pdf-label">PDF</span></span>
+            <span class="tool-title">Изображения в PDF</span>
+            <span class="tool-description">Соберите JPG и PNG в один PDF</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="rotate" type="button">
+            <span class="tool-icon icon-rotate">↻</span>
+            <span class="tool-title">Повернуть PDF</span>
+            <span class="tool-description">Поверните все страницы документа</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="organize" type="button">
+            <span class="tool-icon icon-organize">☷</span>
+            <span class="tool-title">Упорядочить страницы</span>
+            <span class="tool-description">Задайте порядок страниц в документе</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="watermark" type="button">
+            <span class="tool-icon icon-watermark">T</span>
+            <span class="tool-title">Добавить водяной знак</span>
+            <span class="tool-description">Добавьте текст поверх страниц PDF</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="page-numbers" type="button">
+            <span class="tool-icon icon-numbers">№</span>
+            <span class="tool-title">Добавить номера страниц</span>
+            <span class="tool-description">Пронумеруйте страницы документа</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="sign" type="button">
+            <span class="tool-icon icon-sign">✎</span>
+            <span class="tool-title">Подписать PDF</span>
+            <span class="tool-description">Нарисуйте подпись и добавьте её в PDF</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="ocr" type="button">
+            <span class="tool-icon icon-ocr">OCR</span>
+            <span class="tool-title">Распознать текст в PDF</span>
+            <span class="tool-description">Сделайте скан документа доступным для поиска</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="office-to-pdf" type="button">
+            <span class="tool-icon icon-office">DOC</span>
+            <span class="tool-title">Office в PDF</span>
+            <span class="tool-description">Конвертируйте Word, Excel и PowerPoint в PDF</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="pdf-to-docx" type="button">
+            <span class="tool-icon icon-office">W</span>
+            <span class="tool-title">PDF в Word</span>
+            <span class="tool-description">Перенесите текст PDF в документ DOCX</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="pdf-to-pptx" type="button">
+            <span class="tool-icon icon-presentation">PPT</span>
+            <span class="tool-title">PDF в PowerPoint</span>
+            <span class="tool-description">Создайте слайды из страниц PDF</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="pdf-to-xlsx" type="button">
+            <span class="tool-icon icon-spreadsheet">XLS</span>
+            <span class="tool-title">PDF в Excel</span>
+            <span class="tool-description">Перенесите текст из PDF в таблицу XLSX</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="pdf-to-markdown" type="button">
+            <span class="tool-icon icon-markdown">MD</span>
+            <span class="tool-title">PDF в Markdown</span>
+            <span class="tool-description">Сохраните текст документа в формате MD</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="summarize" type="button">
+            <span class="tool-icon icon-ai">✳</span>
+            <span class="tool-title">Краткая сводка</span>
+            <span class="tool-description">Выделите главное с помощью локальной AI-модели</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="translate" type="button">
+            <span class="tool-icon icon-ai">文</span>
+            <span class="tool-title">Перевести PDF</span>
+            <span class="tool-description">Переведите текст документа локальной AI-моделью</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="compare" type="button">
+            <span class="tool-icon icon-compare">±</span>
+            <span class="tool-title">Сравнить PDF</span>
+            <span class="tool-description">Найдите различия между двумя документами</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="repair" type="button">
+            <span class="tool-icon icon-repair">↻</span>
+            <span class="tool-title">Восстановить PDF</span>
+            <span class="tool-description">Попробуйте исправить повреждённый файл</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="protect" type="button">
+            <span class="tool-icon icon-security">⌑</span>
+            <span class="tool-title">Защитить PDF паролем</span>
+            <span class="tool-description">Зашифруйте документ паролем</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="unlock" type="button">
+            <span class="tool-icon icon-security">⌑</span>
+            <span class="tool-title">Снять пароль с PDF</span>
+            <span class="tool-description">Сохраните копию, зная пароль документа</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="pdfa" type="button">
+            <span class="tool-icon icon-pdfa">A</span>
+            <span class="tool-title">Преобразовать в PDF/A</span>
+            <span class="tool-description">Подготовьте PDF для долгосрочного хранения</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="html-to-pdf" type="button">
+            <span class="tool-icon icon-html">HTML</span>
+            <span class="tool-title">HTML в PDF</span>
+            <span class="tool-description">Преобразуйте HTML-файл в PDF</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="redact" type="button">
+            <span class="tool-icon icon-redact">▰</span>
+            <span class="tool-title">Скрыть данные в PDF</span>
+            <span class="tool-description">Закройте выбранную область страницы</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="crop" type="button">
+            <span class="tool-icon icon-crop">□</span>
+            <span class="tool-title">Обрезать страницы PDF</span>
+            <span class="tool-description">Уберите лишние поля у страниц</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="tool-card" data-tool="forms" type="button">
+            <span class="tool-icon icon-forms">☑</span>
+            <span class="tool-title">Заполнить PDF-форму</span>
+            <span class="tool-description">Заполните интерактивные поля документа</span>
+            <span class="tool-arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+        <p class="server-status" id="server-status" role="status" aria-live="polite">Проверяем локальные инструменты…</p>
+      </section>
+
+      <section class="how-section" id="how-it-works">
+        <div class="how-heading">
+          <div class="section-kicker">БЫСТРО И ПРОСТО</div>
+          <h2>Как это работает</h2>
+        </div>
+        <div class="steps">
+          <article class="step"><span class="step-number">01</span><span class="step-icon">⇧</span><h3>Выберите инструмент</h3><p>Откройте нужное действие из списка.</p></article>
+          <article class="step"><span class="step-number">02</span><span class="step-icon">▧</span><h3>Добавьте файлы</h3><p>Загрузите документ или изображения со своего устройства.</p></article>
+          <article class="step"><span class="step-number">03</span><span class="step-icon">↓</span><h3>Скачайте результат</h3><p>Готовый файл загрузится на ваше устройство.</p></article>
+        </div>
+      </section>
+
+      <section class="privacy-section" id="privacy">
+        <div class="privacy-symbol">⌑</div>
+        <div><h2>Файлы остаются на вашем устройстве</h2><p>Локальный сервер временно хранит документы только на этом компьютере и удаляет их после обработки. Облачные сервисы не используются.</p></div>
+        <span class="privacy-check">✓</span>
+      </section>
+    </main>
+
+    <footer class="footer"><a class="brand footer-brand" href="#"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span> файло<span class="brand-period">.</span></a><span>Локальные инструменты для PDF</span></footer>
+
+    <dialog class="tool-dialog" aria-labelledby="dialog-title">
+      <form class="dialog-form" method="dialog">
+        <button class="dialog-close" type="button" aria-label="Закрыть">×</button>
+        <div class="dialog-icon" aria-hidden="true">▧</div>
+        <div class="dialog-kicker">ИНСТРУМЕНТ</div>
+        <h2 id="dialog-title">Объединить PDF</h2>
+        <p class="dialog-description">Выберите файлы для обработки.</p>
+        <label class="drop-zone" for="file-input">
+          <span class="upload-icon">↑</span>
+          <strong>Перетащи файлы сюда</strong>
+          <span class="drop-subtitle">или <span>выберите их на устройстве</span></span>
+          <span class="file-types"></span>
+        </label>
+        <input id="file-input" type="file" hidden multiple>
+        <div class="file-list" aria-live="polite"></div>
+        <div class="tool-options"></div>
+        <div class="status-message" role="status" aria-live="polite"></div>
+        <div class="dialog-actions">
+          <button class="secondary-button" type="button">Отмена</button>
+          <button class="primary-button" type="button" disabled>Продолжить <span>→</span></button>
+        </div>
+      </form>
+    </dialog>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
